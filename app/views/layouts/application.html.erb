@@ -30,7 +30,22 @@
 <hr />
 <br class="clear" />
 
+<div class="container">
 <%= yield %>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-xs-6">
+			<%= link_to "This isn't enough, I need more", "#", :class => 'next-quote' %>
+		</div>
+		<div class="col-xs-6 footer-blurb">
+			Proudly coded in Super Suburbia by <a href="http://arightious.github.io/">Aron Rightious</a><br />
+
+			Here's where I learned to build this - <a href="http://thefirehoseproject.com">Learn how to code!</a>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
