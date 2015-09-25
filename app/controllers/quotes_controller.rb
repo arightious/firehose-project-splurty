@@ -8,7 +8,10 @@ def new
 	end
 
 def create
-	Quote.create(quote_params)
+	@quote = Quote.create(quote_params)
+	if @quote.invalid?
+		flash[:error] = 'Your entry was <strong>too short, or too long</strong>. Try again.'
+	end
 	redirect_to root_path
 end 
 
